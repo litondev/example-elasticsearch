@@ -58,7 +58,11 @@ export const AuthSignup = async (req, res) => {
 
 export const AuthMe = async(req,res) => {
 	try{
-		
+	   console.log(req.jwt_sub);
+
+       return res.json({
+        id : req.jwt_sub
+       });
 	}catch(error){
        return FormatResponse.Failed(error,res);
 	}
