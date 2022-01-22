@@ -1,0 +1,16 @@
+{"level":"info","message":"Product is not defined"}
+{"level":"info","message":"Product is not defined"}
+{"level":"info","message":"Product is not defined"}
+{"level":"info","message":"ProductModel.select is not a function"}
+{"level":"info","message":"Transaction already in progress"}
+{"level":"info","message":"(intermediate value).session is not a function"}
+{"level":"info","message":"Transaction numbers are only allowed on a replica set member or mongos"}
+{"level":"info","message":"Products validation failed: price: Path `price` is required."}
+{"level":"info","message":"Products validation failed: title: Path `title` is required., price: Path `price` is required."}
+{"level":"info","message":"Products validation failed: title: Path `title` is required., price: Path `price` is required."}
+{"level":"info","message":"Products validation failed: title: Path `title` is required., price: Path `price` is required."}
+{"level":"info","message":"isValid is not defined"}
+{"level":"info","message":"isValid is not defined"}
+{"level":"info","message":"ProductModel.select is not a function"}
+{"level":"info","message":"ProductModel.select is not a function"}
+{"level":"info","message":"Product is not defined"}

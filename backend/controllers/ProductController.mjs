@@ -1,15 +1,26 @@
 // import models
 import ProductModel from "../models/Product.mjs";
- 
+
+// import helpers
+import FormatResponse from "../helpers/FormatResponse.mjs";
+
+// import validators
+import {ValidateProduct} from "../validators/ProductValidator.mjs";
+
 // function get All Products
 export const ProductIndex = async (req, res) => {
     try {
-        const products = await Product.find();
-        res.json(products);
-    } catch (error) {
-        res.status(500).json({
-            message: error.message
+       const products = await ProductModel
+        .find()
+        .select({
+            _id : 1,
+            title : 1,
+            price : 1,
         });
+
+       return res.json(products);
+    } catch (error) {       
+       return FormatResponse.Failed(error,res);
     }
      
 }
@@ -17,70 +28,109 @@ export const ProductIndex = async (req, res) => {
 // function get single Product
 export const ProductShow = async (req, res) => {
     try {
-        const product = await ProductModel.findById(req.params.id);
-        res.json(product);
+
+        const product = await ProductModel
+            .findById(req.params.id)
+            .select({
+                _id : 1,
+                title : 1,
+                price : 1
+            });
+
+        if(!product){
+            return res.status(401).json({
+                "message" : "Not Found"
+            });
+        }
+
+        return res.json(product);
     } catch (error) {
-        res.status(500).json({
-            message: error.message
-        });
+        return FormatResponse.Failed(error,res);
     }
      
 }
  
 // function Create Product
 export const ProductCreate = async (req, res) => {
-    try {
-        console.log(req.body);
-        const product = new ProductModel(req.body);
-        const savedProduct = await product.save();
-        res.status(201).json(savedProduct);
-    } catch (error) {
-        res.status(500).json({
-            message: error.message
+    try {                
+        let isNotValid = await ValidateProduct(req);
+
+        if(isNotValid){
+            return res.status(422).json({
+                "message" : isNotValid.msg
+            });
+        }    
+        
+        await new ProductModel(req.body).save()    
+
+        return res.json({
+            "message" : true
         });
+    } catch (error) {    
+       return FormatResponse.Failed(error,res);
     }
 }
  
 // function Update Product
 export const ProductUpdate = async (req, res) => {
     try {
-        const cekId = await Product.findById(req.params.id);
-        if(!cekId) {
+        let isNotValid = await ValidateProduct(req);
+
+        if(isNotValid){
+            return res.status(422).json({
+                "message" : isNotValid.msg
+            });
+        }    
+
+        const product = await ProductModel          
+            .findById(req.params.id)
+            .select({
+                _id : 1
+            });
+
+        if(!product) {            
             return res.status(404).json({
-                message: "Data tidak ditemukan"
-            }); 
+                message : "Not Found"
+            })
         }
-        const updatedProduct = await Product.updateOne({
+        
+        await ProductModel.updateOne({
             _id: req.params.id
         }, {
             $set: req.body
         });
-
-        res.status(200).json(updatedProduct);
-    } catch (error) {
-        res.status(500).json({
-            message: error.message
+    
+        return res.json({
+            message : true
         });
+    } catch (error) {        
+        return FormatResponse.Failed(error,res);
     }
 }
  
 // function Delete Product
 export const ProductDestroy = async (req, res) => {
-    try {
-        const cekId = await Product.findById(req.params.id);
+    try {        
+        const product = await ProductModel           
+            .findById(req.params.id)
+            .select({
+                _id : 1
+            });
 
-        if(!cekId) {
-            return res.status(404).json({message: "Data tidak ditemukan"});
+        if(!product) {            
+            return res.status(404).json({
+                message: "Not Found"
+            });
         }
 
-        const deletedProduct = await Product.deleteOne({
+        await ProductModel.deleteOne({
             _id: req.params.id
         });
-
-        res.status(200).json(deletedProduct);
-    } catch (error) {
-        res.status(500).json({
-            message: error.message
+    
+        return res.json({
+            message : true
         });
+    } catch (error) {    
+        return FormatResponse.Failed(error,res);
     }
 }
