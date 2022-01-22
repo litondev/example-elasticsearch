@@ -8,6 +8,7 @@ import cors from "cors";
 import bodyParser from "body-parser";
 
 import ProductRoute from "./routes/product.mjs";
+import AuthRoute from "./routes/auth.mjs";
 
 import winston from "winston";
 
@@ -35,6 +36,7 @@ app.get('/', (req, res) => {
     });
 });
 
+app.use('/auth',AuthRoute);
 app.use('/product',ProductRoute);
 
 app.listen(process.env.PORT || 3001,() => {
