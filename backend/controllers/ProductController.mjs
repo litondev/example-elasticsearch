@@ -12,8 +12,28 @@ import fs from "fs";
 // function get All Products
 export const ProductIndex = async (req, res) => {
     try {
+       let filter = {};
+
+       if(req.query.search){
+            filter = {
+                $and : [{
+                    $or : [
+                        {
+                            title : {
+                                $regex : ".*" + req.query.search + ".*",
+                            },                                                        
+                        }
+                    ]
+                }]           
+            }
+       }
+
        const products = await ProductModel
-        .find()
+        .find(filter)
+        .limit(req.query.per_page || 5)
+        .sort({
+            [req.query.order || 'createdAt'] : (req.query.ordering === 'asc' ? 1 : -1)
+        })
         .select({
             _id : 1,
             title : 1,

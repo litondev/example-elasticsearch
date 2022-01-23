@@ -15,10 +15,32 @@ import fs from "fs";
 // function get All Users
 export const UserIndex = async (req, res) => {
     try {
+       let filter = {};
+
+       if(req.query.search){
+            filter = {
+                $and : [{
+                    $or : [
+                        {
+                            username : {
+                                $regex : ".*" + req.query.search + ".*",
+                            },                                          
+                        },
+                        {
+                            email : {
+                                $regex : ".*" + req.query.search + ".*"
+                            }                                          
+                        }
+                    ]
+                }]           
+            }
+       }
+
        const users = await UserModel
-        .find()
+        .find(filter)
+        .limit(req.query.per_page || 5)
         .sort({
-            'createdAt' : -1
+            [req.query.order || 'createdAt'] : (req.query.ordering === 'asc' ? 1 : -1)
         })
         .select({
             _id : 1,
