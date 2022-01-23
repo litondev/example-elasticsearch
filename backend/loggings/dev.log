@@ -14,3 +14,5 @@
 {"level":"info","message":"ProductModel.select is not a function"}
 {"level":"info","message":"ProductModel.select is not a function"}
 {"level":"info","message":"Product is not defined"}
+{"level":"info","message":"Converting circular structure to JSON\n    --> starting at object with constructor 'Topology'\n    |     property 's' -> object with constructor 'Object'\n    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'\n    --- property 'topology' closes the circle"}
+{"level":"info","message":"productPhoto is not defined"}

@@ -50,7 +50,7 @@ const User = mongoose.Schema({
     identity : {
         card : {
             type : String,
-            required : true
+            required : false
         }    
     }
 });

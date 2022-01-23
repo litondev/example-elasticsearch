@@ -28,6 +28,25 @@ export const ValidateProduct = (req) => {
 			.escape()
 			.run(req);
 
+		await check('stock')
+		
+			.isFloat()
+			.withMessage("Stock tidak valid")
+
+			.trim()
+			.escape()
+			.run(req);
+
+		await check('description')
+
+			.isLength({max : 200})
+			.withMessage("Deskripsi terlalu panjang")
+
+			.trim()
+			.escape()
+			.run(req);
+
+
 		return !validationResult(req).isEmpty()
 			? validationResult(req).array()[0]
 			: false;

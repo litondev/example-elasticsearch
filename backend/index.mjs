@@ -1,16 +1,16 @@
 import 'dotenv/config' 
 import "./configs/database.mjs"
 
+import path from "path"
 import express from "express"
 
 import cors from "cors";
 
 import bodyParser from "body-parser";
 
-import ProductRoute from "./routes/product.mjs";
-import AuthRoute from "./routes/auth.mjs";
-
 import winston from "winston";
+
+// import multer from 'multer';
 
 winston.loggers.add("dev",{
 	level : 'info',
@@ -22,13 +22,18 @@ winston.loggers.add("dev",{
 	]
 });
 
+import ProductRoute from "./routes/product.mjs";
+import AuthRoute from "./routes/auth.mjs";
+
+// const parsingMultipartForm = multer();
+
 const app = express();
 
+app.use(bodyParser.urlencoded({ extended: true  }));
+app.use(bodyParser.json());
+// app.use(parsingMultipartForm.array());
 app.use(cors());
-app.use(express.json());
-app.use(bodyParser.urlencoded({
-	extended: true
-}));
+app.use(express.static('assets'));
 
 app.get('/', (req, res) => {
     res.json({

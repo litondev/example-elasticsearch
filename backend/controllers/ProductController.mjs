@@ -7,6 +7,10 @@ import FormatResponse from "../helpers/FormatResponse.mjs";
 // import validators
 import {ValidateProduct} from "../validators/ProductValidator.mjs";
 
+import path from "path";
+
+import multer from "multer";     
+
 // function get All Products
 export const ProductIndex = async (req, res) => {
     try {
@@ -21,8 +25,7 @@ export const ProductIndex = async (req, res) => {
        return res.json(products);
     } catch (error) {       
        return FormatResponse.Failed(error,res);
-    }
-     
+    }    
 }
  
 // function get single Product
@@ -50,25 +53,103 @@ export const ProductShow = async (req, res) => {
      
 }
  
+ const ProductUpload = multer({         
+        // onFileUploadStart: function (file) {
+        //     console.log(file.originalname + ' is starting ...')
+        // },
+        storage: multer.diskStorage({
+            destination: (req, file, cb) => {                
+                cb(null,"./assets/");
+            },
+            filename: function (req, file, cb) { 
+                cb(null, file.fieldname + "-" + Date.now() + ".png");
+            }
+        }),
+
+
+        // limits: { 
+        //     fileSize: 1 * 1000 * 1000
+        // },
+
+        // fileFilter: function (req, file, cb){     
+        //     if(!['jpeg','jpg','png'].includes(file.mimetype)){
+        //         return cb(new Error("File tidak valid"));
+        //     }
+          
+        //     return cb(null, true);             
+        //     } 
+    }).single("photo");  
+
+// export const ProductPhoto = (req,res) => {    
+//     const ProductUpload = multer({ 
+//         onFileUploadStart: function (file) {
+//             console.log(file.originalname + ' is starting ...')
+//         },
+//         storage: multer.diskStorage({
+//             destination: (req, file, cb) => {                
+//                 cb(null,"./assets");
+//             },
+//             // filename: function (req, file, cb) { 
+//             //     cb(null, file.fieldname + "-" + Date.now() + ".png");
+//             // }
+//         }),
+
+
+//         // limits: { 
+//         //     fileSize: 1 * 1000 * 1000
+//         // },
+
+//         // fileFilter: function (req, file, cb){     
+//         //     if(!['jpeg','jpg','png'].includes(file.mimetype)){
+//         //         return cb(new Error("File tidak valid"));
+//         //     }
+          
+//         //     return cb(null, true);             
+//         //     } 
+//     }).single("photo");  
+
+//     return new Promise((reslove,reject) => {        
+//         return ProductUpload(req,res,(err) => {                
+//             if(err){
+//                 return reject(err);
+//             }else{
+//                 return reslove(true);
+//             }
+//         });
+//     });
+// }
 // function Create Product
 export const ProductCreate = async (req, res) => {
-    try {                
-        let isNotValid = await ValidateProduct(req);
 
-        if(isNotValid){
-            return res.status(422).json({
-                "message" : isNotValid.msg
-            });
-        }    
-        
-        await new ProductModel(req.body).save()    
-
-        return res.json({
-            "message" : true
+        ProductUpload(req,res,(err) => {
+            console.log(err);
         });
-    } catch (error) {    
-       return FormatResponse.Failed(error,res);
-    }
+
+
+    // try {                
+    //     // console.log(req.file);
+
+    //     let isNotValid = await ValidateProduct(req);
+
+    //     if(isNotValid){
+    //         return res.status(422).json({
+    //             "message" : isNotValid.msg
+    //         });
+    //     }    
+
+
+    //     return res.json({
+    //         "message" : "p"
+    //     });
+
+    //     await new ProductModel(req.body).save()    
+
+    //     return res.json({
+    //         "message" : true
+    //     });
+    // } catch (error) {    
+    //    return FormatResponse.Failed(error,res);
+    // }
 }
  
 // function Update Product

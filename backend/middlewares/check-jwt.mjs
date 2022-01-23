@@ -22,6 +22,8 @@ export const checkJwt = (req, res, next) => {
   } catch(err) {
   	console.log(err);
   	
+    // winston logging
+    
   	res.status(401).json({
   		"message" : "Unauthorized"
   	})
