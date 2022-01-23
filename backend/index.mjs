@@ -44,6 +44,7 @@ app.get('/', (req, res) => {
 app.use('/auth',AuthRoute);
 app.use('/product',ProductRoute);
 
+
 app.listen(process.env.PORT || 3001,() => {
     console.log("Service App Is Running in port 3001");
 });
