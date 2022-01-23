@@ -26,6 +26,8 @@ const Product = mongoose.Schema({
     	required : false,
     	default : null
     }
+},{
+    timestamps : true
 });
  
 // export model

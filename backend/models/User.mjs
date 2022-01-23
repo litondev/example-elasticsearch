@@ -15,7 +15,7 @@ const User = mongoose.Schema({
 
     password : {
     	type : String,
-    	required : true
+    	required : false
     },
 
     photo : {
@@ -53,6 +53,8 @@ const User = mongoose.Schema({
             required : false
         }    
     }
+},{
+    timestamps : true
 });
  
 // export model

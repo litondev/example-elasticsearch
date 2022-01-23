@@ -3,13 +3,13 @@ import jwt from 'jsonwebtoken';
 export const checkJwt = (req, res, next) => { 
   try {
     if(!req.headers["authorization"]){
-    	res.status(401).json({
+    	return res.status(401).json({
   		  "message" : "Unauthorized"
   	 });
     }
 
     if(req.headers.authorization.search("Bearer ") < 0){
-    	res.status(401).json({
+    	return res.status(401).json({
   		  "message" : "Unauthorized"
   	 })
     }
@@ -24,7 +24,7 @@ export const checkJwt = (req, res, next) => {
   	
     // winston logging
     
-  	res.status(401).json({
+  	return res.status(401).json({
   		"message" : "Unauthorized"
   	})
   }

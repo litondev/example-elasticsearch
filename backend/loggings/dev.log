@@ -1,18 +1,10 @@
-{"level":"info","message":"Product is not defined"}
-{"level":"info","message":"Product is not defined"}
-{"level":"info","message":"Product is not defined"}
-{"level":"info","message":"ProductModel.select is not a function"}
-{"level":"info","message":"Transaction already in progress"}
-{"level":"info","message":"(intermediate value).session is not a function"}
-{"level":"info","message":"Transaction numbers are only allowed on a replica set member or mongos"}
-{"level":"info","message":"Products validation failed: price: Path `price` is required."}
-{"level":"info","message":"Products validation failed: title: Path `title` is required., price: Path `price` is required."}
-{"level":"info","message":"Products validation failed: title: Path `title` is required., price: Path `price` is required."}
-{"level":"info","message":"Products validation failed: title: Path `title` is required., price: Path `price` is required."}
-{"level":"info","message":"isValid is not defined"}
-{"level":"info","message":"isValid is not defined"}
-{"level":"info","message":"ProductModel.select is not a function"}
-{"level":"info","message":"ProductModel.select is not a function"}
-{"level":"info","message":"Product is not defined"}
-{"level":"info","message":"Converting circular structure to JSON\n    --> starting at object with constructor 'Topology'\n    |     property 's' -> object with constructor 'Object'\n    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'\n    --- property 'topology' closes the circle"}
-{"level":"info","message":"productPhoto is not defined"}
+{"level":"info","message":"Users validation failed: areas: Cast to embedded failed for value \"'[object Object]'\" (type string) at path \"areas\""}
+{"level":"info","message":"Users validation failed: areas: Cast to embedded failed for value \"'[object Object]'\" (type string) at path \"areas\""}
+{"level":"info","message":"Users validation failed: areas: Cast to embedded failed for value \"'[object Object]'\" (type string) at path \"areas\""}
+{"level":"info","message":"Users validation failed: areas: Cast to embedded failed for value \"'[object Object]'\" (type string) at path \"areas\""}
+{"level":"info","message":"Users validation failed: areas: Cast to embedded failed for value \"'[object Object]'\" (type string) at path \"areas\""}
+{"level":"info","message":"Users validation failed: areas: Cast to embedded failed for value \"'[object Object]'\" (type string) at path \"areas\""}
+{"level":"info","message":"Users validation failed: areas: Cast to embedded failed for value \"'[object Object]'\" (type string) at path \"areas\""}
+{"level":"info","message":"Cannot create property 'ignore_whitespace' on string 'Isi nama area harus diisi'"}
+{"level":"info","message":"ValidateUser is not defined"}
+{"level":"info","message":"Cannot set headers after they are sent to the client"}
