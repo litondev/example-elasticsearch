@@ -1,5 +1,6 @@
 // import express
 import express from "express";
+import UserUploadMiddleware from "../uploads/User.mjs";
 
 // import controllers
 import { 
@@ -22,9 +23,9 @@ UserRoute.get('/', UserIndex);
 // Route get single User
 UserRoute.get('/:id', UserShow);
 // Route CREATE User
-UserRoute.post('/',UserCreate);
+UserRoute.post('/',UserUploadMiddleware,UserCreate);
 // Route UPDATE User
-UserRoute.put('/:id',UserUpdate);
+UserRoute.put('/:id',UserUploadMiddleware,UserUpdate);
 // Route DELETE User
 UserRoute.delete('/:id', UserDestroy);
  

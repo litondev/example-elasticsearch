@@ -10,6 +10,8 @@ import {ValidateUser} from "../validators/UserValidator.mjs";
 // import bcrypt
 import {BcryptHash} from "../helpers/Bcrypt.mjs";
 
+import fs from "fs";
+
 // function get All Users
 export const UserIndex = async (req, res) => {
     try {
@@ -84,6 +86,10 @@ export const UserCreate = async (req, res) => {
 
         let payload = req.body;
 
+        if(req.file){
+            req.body["photo"] = req.file.filename; 
+        }
+
         payload["password"] = BcryptHash(payload["password"]);
 
         await new UserModel(payload).save()    
@@ -110,7 +116,8 @@ export const UserUpdate = async (req, res) => {
         const user = await UserModel          
             .findById(req.params.id)
             .select({
-                _id : 1,            
+                _id : 1,     
+                photo : 1       
             });
 
         if(!user) {            
@@ -122,6 +129,14 @@ export const UserUpdate = async (req, res) => {
         console.log(req.body);
 
         let payload = req.body;
+
+        if(req.file){                        
+            req.body["photo"] = req.file.filename;             
+
+            if(user.photo){
+                fs.unlinkSync("./assets/users/"+user.photo);
+            }
+        }
 
         if(payload["password"]){
             payload["password"] = BcryptHash(payload["password"]);
@@ -148,6 +163,7 @@ export const UserDestroy = async (req, res) => {
             .findById(req.params.id)
             .select({
                 _id : 1,            
+                photo : 1
             });
 
         if(!user) {            
@@ -156,6 +172,10 @@ export const UserDestroy = async (req, res) => {
             });
         }
     
+        if(user.photo){
+            fs.unlinkSync("./assets/users/"+user.photo);
+        }
+
         await UserModel.deleteOne({
             _id: req.params.id
         });

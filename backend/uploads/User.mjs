@@ -25,7 +25,7 @@ const parsingMultipartForm = multer({
     }   
 }).single('photo')
 
-const ProductUploadMiddleware = (req,res,next) => {
+const UserUploadMiddleware = (req,res,next) => {
 	return parsingMultipartForm(req,res,(err) => {
 		if(!err){
 			return next();
@@ -37,4 +37,4 @@ const ProductUploadMiddleware = (req,res,next) => {
 	});
 }
 
-export default ProductUploadMiddleware;
+export default UserUploadMiddleware;
