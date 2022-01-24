@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.087500002"
-     inkscape:cx="1263.4024"
-     inkscape:cy="897.87183"
+     inkscape:cx="-782.31184"
+     inkscape:cy="905.95305"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -87,75 +87,24 @@
        height="4.5357141"
        x="-837.59528"
        y="-82.488091" />
-    <g
-       id="g1250">
-      <rect
-         y="-127.89495"
-         x="-381"
-         height="139.09525"
-         width="145.14285"
-         id="rect836-6"
-         style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <text
-         id="text840-7"
-         y="62.873367"
-         x="-352.97891"
-         style="font-style:normal;font-weight:normal;font-size:33.90526581px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.84763163"
-         xml:space="preserve"><tspan
-           style="stroke-width:0.84763163"
-           y="62.873367"
-           x="-352.97891"
-           id="tspan838-5"
-           sodipodi:role="line">Nginx</tspan></text>
-      <text
-         id="text840-7-5"
-         y="-163.74269"
-         x="-391.12811"
-         style="font-style:normal;font-weight:normal;font-size:33.90526581px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.84763163"
-         xml:space="preserve"><tspan
-           style="stroke-width:0.84763163"
-           y="-163.74269"
-           x="-391.12811"
-           id="tspan838-5-0"
-           sodipodi:role="line">(Api Gateway)</tspan></text>
-    </g>
-    <g
-       id="g1266"
-       transform="translate(-54.08157,70.876099)">
-      <g
-         id="g1461">
-        <g
-           id="g938"
-           transform="translate(73.379204,-4.2763124)">
-          <rect
-             y="496.21783"
-             x="-397.62656"
-             height="139.09525"
-             width="145.14285"
-             id="rect836-6-5-2"
-             style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-          <text
-             id="text840-7-6-7"
-             y="678.80035"
-             x="-396.03601"
-             style="font-style:normal;font-weight:normal;font-size:33.90526581px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.84763163"
-             xml:space="preserve"><tspan
-               style="stroke-width:0.84763163"
-               y="678.80035"
-               x="-396.03601"
-               id="tspan838-5-2-0"
-               sodipodi:role="line">Next (JS)</tspan></text>
-        </g>
-      </g>
-    </g>
     <rect
-       style="opacity:1;fill:#0eff00;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect847-93"
-       width="399.14285"
-       height="4.5357141"
-       x="-523.09656"
-       y="-321.15707"
-       transform="rotate(-90)" />
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect836-6"
+       width="145.14285"
+       height="139.09525"
+       x="-381"
+       y="-127.89495" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:33.90526581px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.84763163"
+       x="-365.72647"
+       y="62.873367"
+       id="text840-7"><tspan
+         sodipodi:role="line"
+         id="tspan838-5"
+         x="-365.72647"
+         y="62.873367"
+         style="stroke-width:0.84763163">Next Js</tspan></text>
     <g
        id="g948"
        transform="translate(42.333333,9.0714286)">
@@ -247,17 +196,6 @@
        height="4.5357141"
        x="402.45074"
        y="-80.105194" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:46.71195602px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.16779876"
-       x="134.96455"
-       y="143.27187"
-       id="text1348-3"><tspan
-         sodipodi:role="line"
-         id="tspan1346-6"
-         x="134.96455"
-         y="143.27187"
-         style="stroke-width:1.16779876">Service Product</tspan></text>
     <g
        id="g1709"
        transform="translate(10.342957,353.65679)">
@@ -342,18 +280,6 @@
              id="tspan940">- description</tspan></text>
       </g>
     </g>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:22.24557304px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.55613929"
-       x="-403.20062"
-       y="751.56525"
-       id="text1880"
-       transform="scale(0.94465146,1.0585915)"><tspan
-         sodipodi:role="line"
-         x="-403.20062"
-         y="751.56525"
-         style="fill:#ff0000;fill-opacity:1;stroke-width:0.55613929"
-         id="tspan1882">- Crud Product</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:33.73603058px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.8434006"
