@@ -96,3 +96,17 @@ export const AuthMe = async(req,res) => {
 	}
 }
 
+export const AuthRefreshToken = async(req,res) => {
+    try{
+        var token = jwt.sign({ 
+            exp: Math.floor(Date.now() / 1000) + (60 * 60),
+            sub : req.jwt_sub
+        }, process.env.JWT_SECRET);
+        
+        return res.json({
+            "access_token" : token
+        });
+    }catch(error){
+        return FormatResponse.Failed(error,res);
+    }
+}

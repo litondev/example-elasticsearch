@@ -6,6 +6,7 @@ import {
     AuthSignin, 
     AuthSignup,
     AuthMe,
+    AuthRefreshToken
 } from "../controllers/AuthController.mjs";
  
 import {checkJwt} from "../middlewares/check-jwt.mjs";
@@ -19,6 +20,8 @@ AuthRoute.post("/signin",AuthSignin);
 AuthRoute.post("/signup",AuthSignup);
 
 AuthRoute.get("/me",checkJwt,AuthMe);
+
+AuthRoute.post("/refresh-token",checkJwt,AuthRefreshToken);
 
 // export router
 export default AuthRoute;

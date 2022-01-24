@@ -15,7 +15,8 @@
     "next": "12.0.8",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "yup": "^0.32.11"
+    "react-toastify": "^8.1.0",
+    "yup": "^0.28.5"
   },
   "devDependencies": {
     "eslint": "8.7.0",
