@@ -19,3 +19,7 @@
 {"level":"info","message":"Cast to number failed for value \"test12\" (type string) at path \"price\" for model \"Products\""}
 {"level":"info","message":"praseInt is not defined"}
 {"level":"info","message":"Cast to number failed for value \"NaN\" (type number) at path \"price\" for model \"Products\""}
+{"level":"info","message":"Cast to ObjectId failed for value \"undefined\" (type string) at path \"_id\" for model \"Products\""}
+{"level":"info","message":"Cast to ObjectId failed for value \"undefined\" (type string) at path \"_id\" for model \"Products\""}
+{"level":"info","message":"ENOENT: no such file or directory, unlink './assets/products/photo-1643107465211.png'"}
+{"level":"info","message":"ENOENT: no such file or directory, unlink './assets/products/photo-1643107465211.png'"}

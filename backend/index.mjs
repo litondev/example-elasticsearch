@@ -34,7 +34,7 @@ app.use(bodyParser.urlencoded({ extended: true  }));
 app.use(bodyParser.json());
 // app.use(parsingMultipartForm.array());
 app.use(cors());
-app.use(express.static('assets'));
+app.use(express.static('./assets'));
 
 app.get('/', (req, res) => {
     res.json({

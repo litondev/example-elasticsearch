@@ -3,7 +3,7 @@ import multer from 'multer';
 const parsingMultipartForm = multer({
 	storage: multer.diskStorage({
         destination: (req, file, cb) => {                
-            return cb(null,"./assets/users/");
+            return cb(null,"./assets/products/");
         },
         filename: function (req, file, cb) {         	
             return cb(null, file.fieldname + "-" + Date.now() + ".png");

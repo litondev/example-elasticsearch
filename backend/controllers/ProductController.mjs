@@ -124,7 +124,7 @@ export const ProductUpdate = async (req, res) => {
         if(req.file){                        
             req.body.photo = req.file.filename;             
 
-            if(product.photo){
+            if(product.photo && fs.existsSync("./assets/products/"+product.photo)){
                 fs.unlinkSync("./assets/products/"+product.photo);
             }
         }
@@ -159,7 +159,7 @@ export const ProductDestroy = async (req, res) => {
             });
         }
 
-        if(product.photo){
+        if(product.photo && fs.existsSync("./assets/products/"+product.photo)){
             fs.unlinkSync("./assets/products/"+product.photo);
         }
 

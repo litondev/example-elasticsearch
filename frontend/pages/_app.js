@@ -45,9 +45,7 @@ MyApp.getInitialProps = async ({ctx}) => {
     }
   }
 
-  return {
-    user
-  }
+  return { user }
 }
 
 export default MyApp
