@@ -1,0 +1,1 @@
+https://kb.objectrocket.com/elasticsearch/how-to-integrate-elasticsearch-into-a-web-app-using-nodejs-and-express-part-1-216
