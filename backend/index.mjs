@@ -1,11 +1,6 @@
 import 'dotenv/config' 
 import "./configs/database.mjs"
-
-import { client } from "./elastic/connection.mjs";
-
-client.cluster.health({},function(err,resp,status) {  
-   console.log("-- Client Health --",resp);
-});
+import "./configs/elastic.mjs"
 
 import path from "path"
 import express from "express"

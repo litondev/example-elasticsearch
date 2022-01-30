@@ -8,14 +8,21 @@ import {
     ProductShow, 
     ProductCreate, 
     ProductUpdate,
-    ProductDestroy
+    ProductDestroy,
+
+    ProductElastic
 } from "../controllers/ProductController.mjs";
  
     // express router
 const ProductRoute = express.Router();
  
+
 // Route get All Products
 ProductRoute.get('/', ProductIndex);
+
+// Route Product Elastic
+ProductRoute.get("/elastic",ProductElastic);
+
 // Route get single Product
 ProductRoute.get('/:id', ProductShow);
 // Route CREATE Product
@@ -24,6 +31,7 @@ ProductRoute.post('/', ProductUploadMiddleware,ProductCreate);
 ProductRoute.put('/:id',ProductUploadMiddleware,ProductUpdate);
 // Route DELETE Product
 ProductRoute.delete('/:id', ProductDestroy);
- 
+
+
 // export router
 export default ProductRoute;

@@ -1,0 +1,38 @@
+{"level":"info","message":"Bulk body should either be an Array of commands/string, or a String"}
+{"level":"info","message":"Bulk body should either be an Array of commands/string, or a String"}
+{"level":"info","message":"Invalid id: expected a string."}
+{"level":"info","message":"[illegal_argument_exception] Malformed action/metadata line [1], expected START_OBJECT or END_OBJECT but found [VALUE_STRING]"}
+{"level":"info","message":"[illegal_argument_exception] Malformed action/metadata line [1], expected START_OBJECT or END_OBJECT but found [VALUE_STRING]"}
+{"level":"info","message":"[illegal_argument_exception] Malformed action/metadata line [1], expected START_OBJECT or END_OBJECT but found [VALUE_STRING]"}
+{"level":"info","message":"[illegal_argument_exception] Malformed action/metadata line [1], expected START_OBJECT or END_OBJECT but found [VALUE_STRING]"}
+{"level":"info","message":"[illegal_argument_exception] Malformed action/metadata line [1], expected START_OBJECT or END_OBJECT but found [VALUE_STRING]"}
+{"level":"info","message":"[illegal_argument_exception] Malformed action/metadata line [1], expected START_OBJECT or END_OBJECT but found [VALUE_STRING]"}
+{"level":"info","message":"[illegal_argument_exception] Malformed action/metadata line [1], expected START_OBJECT or END_OBJECT but found [VALUE_STRING]"}
+{"level":"info","message":"[illegal_argument_exception] Malformed action/metadata line [1], expected START_OBJECT or END_OBJECT but found [VALUE_STRING]"}
+{"level":"info","message":"[illegal_argument_exception] Malformed action/metadata line [1], expected START_OBJECT or END_OBJECT but found [VALUE_STRING]"}
+{"level":"info","message":"[illegal_argument_exception] Malformed action/metadata line [1], expected START_OBJECT or END_OBJECT but found [VALUE_STRING]"}
+{"level":"info","message":"[illegal_argument_exception] Malformed action/metadata line [1], expected START_OBJECT or END_OBJECT but found [VALUE_STRING]"}
+{"level":"info","message":"[illegal_argument_exception] Malformed action/metadata line [1], expected START_OBJECT or END_OBJECT but found [VALUE_STRING]"}
+{"level":"info","message":"[illegal_argument_exception] Malformed action/metadata line [1], expected START_OBJECT or END_OBJECT but found [VALUE_STRING]"}
+{"level":"info","message":"[illegal_argument_exception] Malformed action/metadata line [1], expected START_OBJECT or END_OBJECT but found [VALUE_STRING]"}
+{"level":"info","message":"[illegal_argument_exception] Malformed action/metadata line [1], expected START_OBJECT or END_OBJECT but found [VALUE_STRING]"}
+{"level":"info","message":"[illegal_argument_exception] Malformed action/metadata line [1], expected START_OBJECT or END_OBJECT but found [VALUE_STRING]"}
+{"level":"info","message":"[illegal_argument_exception] Malformed action/metadata line [1], expected START_OBJECT or END_OBJECT but found [VALUE_STRING]"}
+{"level":"info","message":"[illegal_argument_exception] Malformed action/metadata line [1], expected START_OBJECT or END_OBJECT but found [VALUE_STRING]"}
+{"level":"info","message":"[illegal_argument_exception] Malformed action/metadata line [1], expected START_OBJECT or END_OBJECT but found [VALUE_STRING]"}
+{"level":"info","message":"[illegal_argument_exception] Malformed action/metadata line [1], expected START_OBJECT or END_OBJECT but found [VALUE_STRING]"}
+{"level":"info","message":"Missing required parameter: id"}
+{"level":"info","message":"Cast to ObjectId failed for value \"elastic\" (type string) at path \"_id\" for model \"Products\""}
+{"level":"info","message":"Cast to ObjectId failed for value \"elastic\" (type string) at path \"_id\" for model \"Products\""}
+{"level":"info","message":"illegal_argument_exception: [illegal_argument_exception] Reason: query malformed, empty clause found at [1:30]"}
+{"level":"info","message":"parsing_exception: [parsing_exception] Reason: unknown query [should]"}
+{"level":"info","message":"x_content_parse_exception: [parsing_exception] Reason: unknown query [should]"}
+{"level":"info","message":"x_content_parse_exception: [parsing_exception] Reason: [price] query malformed, no start_object after query name"}
+{"level":"info","message":"x_content_parse_exception: [parsing_exception] Reason: unknown query [match_pharse] did you mean any of [match_phrase, match_all, match_none, match_phrase_prefix]?"}
+{"level":"info","message":"x_content_parse_exception: [parsing_exception] Reason: [match_phrase] query doesn't support multiple fields, found [description] and [title]"}
+{"level":"info","message":"x_content_parse_exception: [parsing_exception] Reason: [match] query does not support [type]"}
+{"level":"info","message":"x_content_parse_exception: [parsing_exception] Reason: unknown query [match_pharse] did you mean any of [match_phrase, match_all, match_none, match_phrase_prefix]?"}
+{"level":"info","message":"x_content_parse_exception: [parsing_exception] Reason: [match_phrase] query does not support [type]"}
+{"level":"info","message":"x_content_parse_exception: [parsing_exception] Reason: [match_phrase] query does not support [type]"}
+{"level":"info","message":"x_content_parse_exception: [parsing_exception] Reason: [match_phrase] query malformed, no start_object after query name"}
+{"level":"info","message":"parsing_exception: [parsing_exception] Reason: unknown query [multi_pharse] did you mean [multi_match]?"}
