@@ -1,7 +1,5 @@
 import elasticsearch from "elasticsearch";
 
-const client = new elasticsearch.Client({
-  hosts: ["http://localhost:9200"]
+export const client = new elasticsearch.Client({
+  hosts: [`${process.env.DB_ELASTIC}:9200`]
 });
-
-module.exports = client;
